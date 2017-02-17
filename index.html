@@ -76,7 +76,7 @@
                         <a class="page-scroll" href="#register">สมัครค่าย</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#sponsor">SPONSOR</a>
+                        <a class="page-scroll" href="#sponsor">ผู้สนับสนุน</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#map">แผนที่</a>
@@ -312,13 +312,54 @@
     <!-- SPONSOR -->
 
     <section id="services " class="services bg-primary " style="background-color: #F2BD2F; ">
-        <div style="padding-bottom: 150px; "></div>
+
+
+        <div style="padding-bottom: 15px; "></div>
         <div class="container">
 
-            <div class="col-xs">
+            <div class="row">
 
-                <p style="color:#000;">SPONSOR HERE</p>
+                <table width="100%" border="0">
+                    <tr>
+                        <td width="20%"></td>
+                        <td>
+                            <center>
+                                <img src="img/skr.png" width="155" alt="center" />
+                                <p style="font-size: 20px;">รร.สวนกุหลาบวิทยาลัย รังสิต</p>
+                            </center>
+
+                        </td>
+                        <td>
+                            <center>
+                                <img src="img/comfam.png" width="155" alt="center" />
+                                <p style="font-size: 20px;">ครอบครัว ComFamilySKR</p>
+                            </center>
+
+                        </td>
+                        <td width="20%"></td>
+                    </tr>
+                </table>
+
+
+                <!-----------
+
+                <div class="col-xs-6 col-md-3">       
+                </div>
+                <div class="col-xs-6 col-md-3">
+                    <img src="img/comfam.png" width="155" />
+                    <p>ครอบครัว ComFamilySKR</p>
+                </div>
+                <div class="col-xs-6 col-md-3">
+                    <img src="img/skr.png" width="155" />
+                    <p>รร.สวนกุหลาบวิทยาลัย รังสิต</p>
+                </div>
+                <div class="col-xs-6 col-md-3">
+                </div>
+              ---------------->
             </div>
+
+
+
         </div>
 
 
@@ -339,9 +380,7 @@
         <iframe width="100% " height="100% " frameborder="0 " scrolling="no " marginheight="0 " marginwidth="0 " src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3870.9147718563177!2d100.6741161144371!3d14.023066090172314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311d7f128751444d%3A0x4251623c40319b3e!2z4LmC4Lij4LiH4LmA4Lij4Li14Lii4LiZ4Liq4Lin4LiZ4LiB4Li44Lir4Lil4Liy4Lia4Lin4Li04LiX4Lii4Liy4Lil4Lix4LiiICjguKPguLHguIfguKrguLTguJUp!5e0!3m2!1sth!2sus!4v1487138976315 "></iframe>
 
         <br />
-        <small>
-            <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A "></a>
-        </small>
+
     </section>
 
     <!-- contact -->
@@ -404,6 +443,29 @@
     <!-- Scrolling Nav JavaScript -->
     <script src="js/jquery.easing.min.js "></script>
     <script src="js/scrolling-nav.js "></script>
+
+    <script>
+        // Disable Google Maps scrolling
+        // See http://stackoverflow.com/a/25904582/1607849
+        // Disable scroll zooming and bind back the click event
+        var onMapMouseleaveHandler = function(event) {
+            var that = $(this);
+            that.on('click', onMapClickHandler);
+            that.off('mouseleave', onMapMouseleaveHandler);
+            that.find('iframe').css("pointer-events", "none");
+        }
+        var onMapClickHandler = function(event) {
+                var that = $(this);
+                // Disable the click handler until the user leaves the map area
+                that.off('click', onMapClickHandler);
+                // Enable scrolling zoom
+                that.find('iframe').css("pointer-events", "auto");
+                // Handle the mouse leave event
+                that.on('mouseleave', onMapMouseleaveHandler);
+            }
+            // Enable map zooming with mouse scroll when the user clicks the map
+        $('.map').on('click', onMapClickHandler);
+    </script>
 </body>
 
 </html>
