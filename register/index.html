@@ -17,47 +17,122 @@
     <section id="register" class="register">
         <div class="container">
             <div class="row">
-                <div class="col-md-offset-1 col-md-4">
 
-                    <form class="form">
-                        <div class="form-group">
-                            <label for="inputFistName">ชื่อ</label>
-                            <input type="text" class="form-control" id="inputFistName" placeholder="ชื่อ">
-                        </div>
-                    </form>
-                    <div class="col-md-offset-1 col-md-4">
-                        <form>
-                            <div class="form-group" style="padding-left: 15px;">
-                                <label for="inputLastName">นามสกุล</label>
-                                <input type="text" class="form-control" id="inputLastName" placeholder="นามสกุล">
-                            </div>
-                        </form>
+
+                <form class="form-inline">
+                    <div class="form-group">
+
+                        <label for="inputFistName">คำนำหน้า</label>
+                        <select class="form-control">
+                                 <option>นาย</option>
+                                 <option>น.ส.</option>
+                                 <option>ด.ช.</option>
+                                 <option>ด.ญ.</option>
+                            </select>
+
+
+                    </div>
+                    <div class="form-group">
+
+                        <label for="inputFistName">ชื่อ</label>
+                        <input type="text" class="form-control" id="inputFistName" placeholder="ex. ฉ่ายเก้า">
+
+
+                    </div>
+                    <div class="form-group">
+                        <label for="inputLastName">นามสกุล</label>
+                        <input type="text" class="form-control" id="inputLastName" placeholder="ex. พอตเตอร์">
+                    </div>
+                </form>
+
+                <form class="form-inline">
+                    <div class="form-group">
+                        <label for="inputFistName">ชื่อเล่น</label>
+                        <input type="text" class="form-control" id="inputFistName" placeholder="ex. โอมเพี้ยง">
                     </div>
 
-                    </duv>
+                    <div class="form-group">
+                        <label for="inputLastName">ห้อง</label>
+                        <input maxlength="3" size="6" type="text" class="form-control" id="inputLastName" placeholder="ex. 301">
+                    </div>
+                </form>
 
+                <form class="form-inline">
+                    <div class="form-group">
+                        <label for="inputFistName">อายุ</label>
+                        <input type="text" maxlength="3" size="6" class="form-control" id="inputFistName" placeholder="ex. 15">
+                    </div>
 
+                    <div class="form-group">
+                        <label for="inputLastName">วันเกิด</label>
+                        <input type="date" class="form-control" id="inputLastName" placeholder="ex. 301">
+                    </div>
 
-
-
-                    <form>
-                        <div class="form-group">
-                            <label for="exampleInputFile">File input</label>
-                            <input type="file" id="exampleInputFile">
-                            <p class="help-block">Example block-level help text here.</p>
-                        </div>
-                        <div class="checkbox">
-                            <label>
-                               <input type="checkbox"> Check me out
+                    <div class="form-group">
+                        <label for="inputFistName">ศาสนา</label>
+                        <input type="text" size="12" class="form-control" id="inputFistName" placeholder="ex. พุทธ">
+                    </div>
+                </form>
+                <form class="form-inline">
+                    <div class="form-group">
+                        <label style="padding-right: 10px;" for="inputFistName">อาหาร</label>
+                        <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>&nbsp;ทั่วไป
                          </label>
-                        </div>
-                        <button type="submit" class="btn btn-default">Submit</button>
-                    </form>
+                        <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked> &nbsp;ไม่ทั่วไป
+                        </label>
 
-                </div>
-                <!-- /.Row-->
+                        <input type="text" size="40" class="form-control" id="inputFistName" placeholder="ex. เจ มังสวิรัติ หรือเเพ้กุ้ง เเพ้ขนุน">
+                    </div>
+                </form>
+                <form class="form-inline">
+                    <div class="form-group">
+                        <label for="inputFistName">โรคประจำตัว</label>
+                        <input type="text" class="form-control" id="inputFistName" placeholder="ex. ภูมิเเพ้">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputLastName">เเพ้ยา</label>
+                        <input type="text" class="form-control" id="inputLastName" placeholder="ex. Aspirin">
+                    </div>
+                </form>
+
+                <form class="form-inline">
+                    <div class="form-group">
+                        <label for="inputFistName">เบอร์มือถือ</label>
+                        <input type="tel" class="form-control" id="inputFistName" placeholder="ex. 087337XXXX">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputLastName">เบอร์ผู้ปกครอง</label>
+                        <input type="tel" class="form-control" id="inputLastName" placeholder="ex. 02592XXXX">
+                    </div>
+                </form>
+                <form class="form-inline">
+                    <div class="form-group">
+                        <label for="inputFistName">E-mail</label>
+                        <input type="email" size="40" class="form-control" id="inputFistName" placeholder="ex. jabchai_09@potter.com">
+                    </div>
+                </form>
+                <form class="form-inline">
+                    <div class="form-group">
+                        <label for="inputLastName">Facebook</label>
+                        <input type="text" size="30" class="form-control" id="inputLastName" placeholder="ex. Jabchai Potter">
+                    </div>
+                </form>
+                <form class="form-inline">
+                    <div class="form-group">
+                        <label for="inputLastName">Line id</label>
+                        <input type="text" size="30" class="form-control" id="inputLastName" placeholder="ex. JabchaiCamp09">
+                    </div>
+                </form>
+
             </div>
-            <!-- /.Container-->
+
+            <!-- /.Row-->
+        </div>
+        <!-- /.Container-->
     </section>
 
 

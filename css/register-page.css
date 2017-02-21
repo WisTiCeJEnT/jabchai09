@@ -105,9 +105,8 @@ footer {
 }
 
 
-/*  lineColor  */
+/* FORM */
 
-.lineColorBlue {
-    padding: 5px 0;
-    background: #000;
+.form-inline {
+    padding-bottom: 10.5px;
 }
